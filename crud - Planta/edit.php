@@ -26,7 +26,7 @@
                     $desc_planta = $_POST['desc_planta'];
                     $data_plantado = $_POST['data_plantio'];
 
-                    $sql = "UPDATE `planta`set `nome_planta` = '$nome','tipo_planta' = '$tipo_planta','$desc_planta' = 'desc_planta',`data_plantio` = '$data_plantado' WHERE id_planta = $id";
+                    $sql = "UPDATE `planta`set `nome_planta` = '$nome','tipo_planta' = '$tipo_planta','desc_planta' = '$desc_planta',`data_plantio` = '$data_plantado' WHERE id_planta = $id";
 
                     if (mysqli_query($conexao,$sql)) {
                         echo "Planta Alterada com sucesso!";
