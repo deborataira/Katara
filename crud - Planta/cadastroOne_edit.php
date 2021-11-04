@@ -29,24 +29,38 @@
             <div class="col">
                 <h1>Alteração do Cadastro</h1>
                 <form action="edit.php" method="post">
+                    <!--Start de form mas com objetivo de alteração-->
                     <div class="form-group">
+                        <!--Inicio de espaço para pergunta e input-->
                         <label for="nome_planta" class="form-label">Nome da Planta:</label>
+                        <!--Espaço para texto da pergunta-->
                         <input type="text" class="form-control" name="nome_planta" value="<?php echo $linha['nome_planta']; ?>">
+                        <!--Espaço para input pré preenchido da pergunta para alteração da info-->
                     </div>
                     <div class="form-group">
+                        <!--Inicio de espaço para pergunta e input-->
                         <label for="desc_planta" class="form-label">Descrição:</label>
+                        <!--Espaço para texto da pergunta-->
                         <input type="text" class="form-control" name="desc_planta" value="<?php echo $linha['desc_planta']; ?>">
+                        <!--Espaço para input pré preenchido da pergunta para alteração da info-->
                     </div>
                     <div class="form-group">
+                        <!--Inicio de espaço para pergunta e input-->
                         <label for="data_plantio" class="form-label">Data de Plantio</label>
+                        <!--Espaço para texto da pergunta-->
                         <input type="date" class="form-control" name="data_plantio" value="<?php echo $linha['data_plantio']; ?>">
+                        <!--Espaço para input pré preenchido da pergunta para alteração da info-->
                     </div>
                     <div class="form-group">
+                        <!--Inicio de espaço para pergunta e input-->
                         <input type="submit" class="btn btn-success" value="Salvar Alterações">
+                        <!--Botão de salvar alterações-->
                         <input type="hidden" name="id" value="<?php echo $linha['id_planta']; ?>">
                     </div>
                     <a href="pesquisa.php" class=" btn btn-info">Voltar</a>
+                    <!--Botão de Voltar para tela anterior-->
                 </form>
+                <!--Fim do form-->
             </div>
         </div>
     </div>
