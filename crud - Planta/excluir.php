@@ -18,21 +18,23 @@
     <body>
         <div class="container">
             <div class="row">
-                <?php
+                <?php //Inicio do Cod PHP
                     include "conexao.php";
-                    $id = $_POST['id'];      
+                    //Inclui script de conexão do BD
+                    $id = $_POST['id'];     
+                    //Variavel que guarda o ID que será excluido
                     $nome = $_POST['nome'];
-                  
-
+                    //Variavel que guarda o nome que será excluido
                     $sql = "DELETE from `planta` WHERE id_planta = $id";
-
+                    //Variavel que guarda o comando para exclusão do BD
                     if (mysqli_query($conexao,$sql)) {
+                        //Se
                         echo "Excluido com sucesso!";
-                    } else
+                    } else //SENÃO
                         echo "Não excluido!";
-                ?>
-                
+                ?> <!--Fim do PHP-->
                  <a href="pesquisa.php" class="btn btn-primary">Voltar para Pesquisa</a>
+                 <!--Botão de voltar-->
             </div>
         </div>
 

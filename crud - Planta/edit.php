@@ -18,22 +18,27 @@
     <body>
         <div class="container">
             <div class="row">
-                <?php
-                    include "conexao.php";
-                    $id = $_POST['id'];      
-                    $nome = $_POST['nome_planta'];
+                <?php //Inicio do PHP
+                    include "conexao.php"; //Incluindo script de conexão com bd
+                    $id = $_POST['id']; 
+                    //Variavel que guarda o id para editar no bd      
+                    $nome = $_POST['nome_planta']; 
+                    //Variavel que guarda o nome para editar no bd 
                     $desc = $_POST['desc_planta'];
+                    //Variavel que guarda a desc para editar no bd 
                     $data_plantado = $_POST['data_plantio'];
-
-                    $sql = "UPDATE `planta`set `nome_planta` = '$nome', `desc_planta` = '$desc', `data_plantio` = '$data_plantado' WHERE id_planta = $id";
-
+                    //Variavel que guarda a data de plantio para editar no bd 
+                    $sql = "UPDATE `planta`set `nome_planta` = '$nome', `desc_planta` = '$desc', `data_plantio` = '$data_plantado' 
+                    WHERE id_planta = $id";
+                    //Variavel que guarda o comando para edição do BD
                     if (mysqli_query($conexao,$sql)) {
+                        //Se sucesso
                         echo "Planta Alterada com sucesso!";
-                    } else {
+                    } else { //Senão
                         echo "Planta não Alterada!";
                 }
-                ?>
-                 <a href="pesquisa.php" class="btn btn-primary">Voltar</a>
+                ?><!--Fim do PHP-->
+                 <a href="pesquisa.php" class="btn btn-primary">Voltar</a><!--Botão para voltar para a pag de pesquisa-->
             </div>
         </div>
 
