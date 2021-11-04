@@ -18,19 +18,18 @@
                 <?php
                     include "conexao.php";      
                     $nome_planta = $_POST['nome_planta'];
-                    $tipo = $_POST['tipo_planta'];
                     $desc_planta = $_POST['desc_planta'];
                     $data_plantio = $_POST['data_plantio'];
 
-                    $sql = "INSERT INTO `planta`( `nome_planta`, `tipo_planta`, `desc_planta`, `data_plantio`) 
-                    VALUES ('$nome_planta','$tipo', '$desc_planta', '$data_plantio')";
+                    $sql = "INSERT INTO `planta`( `nome_planta`, `desc_planta`, `data_plantio`) 
+                    VALUES ('$nome_planta', '$desc_planta', '$data_plantio')";
 
                     if (mysqli_query($conexao,$sql)) {
                         echo "Planta cadastrada com sucesso!";
                     } else
                         echo "Planta não cadastrada!";
                 ?>
-                 <a href="../index.html" class="btn btn-primary">Voltar ao Inicio</a>
+                 <a href="pesquisa.php" class="btn btn-primary">Voltar ao Inicio</a>
             </div>
         </div>
 

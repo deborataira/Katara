@@ -54,14 +54,12 @@
                         while ($linha = mysqli_fetch_assoc($dados)) {
                             $id_planta = $linha['id_planta'];
                             $nome = $linha['nome_planta'];
-                            $tipo_planta = $linha['tipo_planta'];
                             $desc_planta = $linha['desc_planta'];
                             $data_plantado = $linha['data_plantio'];
 
                             echo "<tr>
                                         <th scope ='row'>$id_planta</th>
                                         <td>$nome</td>                                        
-                                        <td>$tipo_planta</td>
                                         <td>$desc_planta</td>
                                         <td>$data_plantado</td>
                                         <td><a href ='cadastroOne_edit.php?id=$id_planta' class='btn btn-success btn-sm'>Editar</a>

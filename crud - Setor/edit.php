@@ -20,8 +20,9 @@
                     include "conexao.php";
                     $id = $_POST['id'];      
                     $nome = $_POST['nome_setor'];
+                    $id_planta = $_POST['id_planta'];
 
-                    $sql = "UPDATE `setor`set `nome_setor` = '$nome' WHERE id_setor = $id";
+                    $sql = "UPDATE `setor`set `nome_setor` = '$nome', 'id_planta = '$id_planta' WHERE id_setor = $id";
 
                     if (mysqli_query($conexao,$sql)) {
                         echo "$nome Setor Alterado com sucesso!";

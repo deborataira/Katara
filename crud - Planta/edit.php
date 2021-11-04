@@ -22,11 +22,10 @@
                     include "conexao.php";
                     $id = $_POST['id'];      
                     $nome = $_POST['nome_planta'];
-                    $tipo_planta = $_POST['tipo_planta'];
                     $desc = $_POST['desc_planta'];
                     $data_plantado = $_POST['data_plantio'];
 
-                    $sql = "UPDATE `planta`set `nome_planta` = '$nome', `tipo_planta` = '$tipo_planta, `desc_planta` = '$desc', `data_plantio` = '$data_plantado' WHERE id_planta = $id";
+                    $sql = "UPDATE `planta`set `nome_planta` = '$nome', `desc_planta` = '$desc', `data_plantio` = '$data_plantado' WHERE id_planta = $id";
 
                     if (mysqli_query($conexao,$sql)) {
                         echo "Planta Alterada com sucesso!";

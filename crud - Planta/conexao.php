@@ -1,8 +1,8 @@
 <?php
 
 $bdServidor = 'localhost';
-$bdUsuario = 'root';
-$bdSenha = '';
+$bdUsuario = 'admin';
+$bdSenha = 'admin';
 $bdBanco = 'etecdados1';
 $conexao = mysqli_connect($bdServidor, $bdUsuario, $bdSenha, $bdBanco);
 

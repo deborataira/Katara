@@ -19,17 +19,16 @@
                 <?php
                     include "conexao.php";      
                     $nome_setor = $_POST['nome_setor'];
-                    
-
-                    $sql = "INSERT INTO `setor`( `nome_setor`) 
-                    VALUES ('$nome_setor')";
+                    $planta = $_POST['selplanta'];
+                    //echo "Inf. recebidas: ".$nome_setor.",Planta id:".$planta." ";
+                    $sql = "INSERT INTO `setor` (`id_setor`, `nome_setor`, `id_planta`) VALUES (NULL, '$nome_setor', '$planta')";
 
                     if (mysqli_query($conexao,$sql)) {
-                        echo "$nome_setor setor cadastrada com sucesso!";
+                        echo "$nome_setor cadastrado com sucesso!";
                     } else
-                        echo "$nome_setor setor não cadastrada!";
+                        echo "$nome_setor não cadastrado!";
                 ?>
-                 <a href="index.php" class="btn btn-primary">Voltar ao Inicio</a>
+                 <a href="pesquisa.php" class="btn btn-primary">Voltar ao Inicio</a>
             </div>
         </div>
 

@@ -34,10 +34,6 @@
                         <input type="text" class="form-control" name="nome_planta" value="<?php echo $linha['nome_planta']; ?>">
                     </div>
                     <div class="form-group">
-                        <label for="tipo_planta" class="form-label">Subtipo:</label>
-                        <input type="text" class="form-control" name="tipo_planta" value="<?php echo $linha['tipo_planta']; ?>">
-                    </div>
-                    <div class="form-group">
                         <label for="desc_planta" class="form-label">Descrição:</label>
                         <input type="text" class="form-control" name="desc_planta" value="<?php echo $linha['desc_planta']; ?>">
                     </div>
