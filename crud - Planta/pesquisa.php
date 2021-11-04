@@ -36,28 +36,29 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        include "conexao.php";
-                        $sql = "SELECT * FROM planta ";
-                        if (empty($_POST["Pesquisar"])) {
+                        <?php //INICIO DO PHP
+                        include "conexao.php"; //Incluindo Script de Conexão com BD
+                        $sql = "SELECT * FROM planta "; 
+                        //Variavel que guarda o comando para Consulta do BD
+                        if (empty($_POST["Pesquisar"])) { //Se Vazio
                             $pesquisa = "";
-                        } else {
+                        } else { //Senão
                             $pesquisa = test_input($_POST["Pesquisar"]);
                         }
                         $pesq = "SELECT * FROM planta WHERE nome_planta LIKE '%$pesquisa%' ";
-                        if (is_null($pesquisa)) {
+                        // Executa comando no BD
+                        if (is_null($pesquisa)) { // Se vazio
                             $dados = mysqli_query($conexao, $sql);
-                        } else {
+                        } else { //Senão
                             $dados = mysqli_query($conexao, $pesq);
                         }
-
                         while ($linha = mysqli_fetch_assoc($dados)) {
-                            $id_planta = $linha['id_planta'];
-                            $nome = $linha['nome_planta'];
-                            $desc_planta = $linha['desc_planta'];
-                            $data_plantado = $linha['data_plantio'];
-
-                            echo "<tr>
+                            //Enquanto ouverem dados
+                            $id_planta = $linha['id_planta']; // variavel recebe dado
+                            $nome = $linha['nome_planta']; // variavel recebe dado
+                            $desc_planta = $linha['desc_planta']; // variavel recebe dado
+                            $data_plantado = $linha['data_plantio']; // variavel recebe dado
+                            echo "<tr> 
                                         <th scope ='row'>$id_planta</th>
                                         <td>$nome</td>                                        
                                         <td>$desc_planta</td>
@@ -69,26 +70,25 @@
                                         </td>
                                         </tr>";
                         }
+                        // Organiza informação em colunas e adiciona botões de excluir, editar e Informações
                         function test_input($data)
                         {
                             $data = trim($data);
                             $data = stripslashes($data);
                             $data = htmlspecialchars($data);
                             return $data;
-                        }
-
+                        } //Filtra variavel data
                         ?>
-
-
-
                     </tbody>
                 </table>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                     <a href="../index.html">
                         <button type="button" class="btn btn-primary">Sair</button>
+                        <!--Botão de Voltar-->
                     </a>
                     <a href="cadastroOne.php">
                         <button type="button" class="btn btn-primary">Cadastrar</button>
+                        <!--Botão de Cadastrar-->
                     </a>
                 </div>
                 </form>
@@ -101,19 +101,23 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Confirmação de Exclusão</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmação de Exclusão</h5> 
+                    <!--Pergunta se deseja mesmo excluir infos em janela de pop-up-->
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <!--Botão de fechar-->
                 </div>
                 <div class="modal-body">
                     <form action="excluir.php" method="POST">
                         <p>Deseja realmente excluir <b id="nome_planta">Nome da planta?</b>?</p>
-
+                        <!--Escreve o nome da planta-->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                    <!--Botão de Não-->
                     <input type="hidden" name="nome" id="nome_planta_1" value="">
                     <input type="hidden" name="id" id="id_planta" value="">
                     <input type="submit" class="btn btn-success" value="Sim">
+                    <!--Botão de Sim-->
                     </form>
                 </div>
             </div>
