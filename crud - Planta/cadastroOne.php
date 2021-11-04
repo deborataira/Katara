@@ -17,23 +17,37 @@
             <div class="col">
                 <h1>Cadastro</h1>
                 <form action="cadastro.php" method="post">
-                    <div class="form-group">
-                        <label for="nome_planta" class="form-label">Nome da planta:</label>
+                <!--Cria o start para um form e diz a forma como será mandado-->
+                    <div class="form-group"> 
+                        <!--Define parte de um site, neste caso o espaço de uma pergunta-->
+                        <label for="nome_planta" class="form-label">Nome da planta:</label> 
+                        <!--Cria espaço para o nome do input do nome da planta-->
                         <input type="text" class="form-control" name="nome_planta">
+                        <!--Cria espaço para a inserção do nome da planta-->
                     </div>
                     <div class="form-group">
+                        <!--Define parte de um site, neste caso o espaço de uma pergunta-->
                         <label for="desc_planta" class="form-label">Descrição:</label>
+                        <!--Cria espaço para o nome do input do descrição da planta-->
                         <input type="text" class="form-control" name="desc_planta">
+                        <!--Cria espaço para a inserção do descrição da planta-->
                     </div>
                     <div class="form-group">
+                        <!--Define parte de um site, neste caso o espaço de uma pergunta-->
                         <label for="data_plantio" class="form-label">Data que foi plantada:</label>
+                        <!--Cria espaço para o nome do input da data de plantio da planta-->
                         <input type="date" class="form-control" name="data_plantio">
+                        <!--Cria espaço para a inserção da data de plantio da planta-->
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-success">
+                        <!--Botão de envio de informações inseridas para a parte do php que insere 
+                        no banco de dados criado antes da criação do form-->
                     </div>
                     <a href="../index.html" class=" btn btn-info">Voltar ao Inicio</a>
+                    <!--Botão de retornar para tela onde são mostradas as plantas ja cadastradas-->
                 </form>
+                <!--Cria o final para um form-->
             </div>
         </div>
     </div>

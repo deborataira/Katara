@@ -16,20 +16,23 @@
         <div class="container">
             <div class="row">
                 <?php
-                    include "conexao.php";      
-                    $nome_planta = $_POST['nome_planta'];
-                    $desc_planta = $_POST['desc_planta'];
-                    $data_plantio = $_POST['data_plantio'];
-
+                //Inicio do codigo php
+                    include "conexao.php"; //Inserção do Script que conecta o BD     
+                    $nome_planta = $_POST['nome_planta']; //Variavel do nome da planta
+                    $desc_planta = $_POST['desc_planta']; //Variavel da desc da planta
+                    $data_plantio = $_POST['data_plantio']; //Variavel da data de plantio
                     $sql = "INSERT INTO `planta`( `nome_planta`, `desc_planta`, `data_plantio`) 
-                    VALUES ('$nome_planta', '$desc_planta', '$data_plantio')";
-
-                    if (mysqli_query($conexao,$sql)) {
+                    VALUES ('$nome_planta', '$desc_planta', '$data_plantio')"; 
+                    //varivel que guarda o codigo SQL que será carregado no BD 
+                    if (mysqli_query($conexao,$sql)) { 
+                    //se conexão bem sucedida
                         echo "Planta cadastrada com sucesso!";
-                    } else
+                    } else 
+                    //se conexão mal sucedida
                         echo "Planta não cadastrada!";
                 ?>
                  <a href="pesquisa.php" class="btn btn-primary">Voltar ao Inicio</a>
+                 <!--Botão que retorna na tela anterior-->
             </div>
         </div>
 
