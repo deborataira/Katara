@@ -26,7 +26,10 @@
                         <!--Cria espaço para a inserção do nome da planta-->
                     </div>
                     <div class="form-group">
+<<<<<<< Updated upstream
                         <!--Define parte de um site, neste caso o espaço de uma pergunta-->
+=======
+>>>>>>> Stashed changes
                         <label for="desc_planta" class="form-label">Descrição:</label>
                         <!--Cria espaço para o nome do input do descrição da planta-->
                         <input type="text" class="form-control" name="desc_planta">

@@ -32,7 +32,7 @@
                     } else
                         echo "$nome Usuário não Alterado!";
                 ?>
-                 <a href="pesquisa.php" class="btn btn-primary">Voltar ao Inicio</a>
+                 <a href="../menu.html" class="btn btn-primary">Voltar ao Inicio</a>
             </div>
         </div>
 

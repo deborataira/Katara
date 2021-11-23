@@ -65,7 +65,7 @@
                                
                             </tbody>
                             </table>
-                        <a href="index.php" class=" btn btn-info">Voltar ao Início</a>
+                        <a href="menu.html" class=" btn btn-info">Voltar ao Início</a>
                     </form>
                 </div>
             </div>

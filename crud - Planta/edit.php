@@ -18,19 +18,32 @@
     <body>
         <div class="container">
             <div class="row">
+<<<<<<< Updated upstream
                 <?php //Inicio do PHP
                     include "conexao.php"; //Incluindo script de conexão com bd
                     $id = $_POST['id']; 
                     //Variavel que guarda o id para editar no bd      
                     $nome = $_POST['nome_planta']; 
                     //Variavel que guarda o nome para editar no bd 
+=======
+                <?php
+                    include "conexao.php";
+                    $id = $_POST['id'];      
+                    $nome = $_POST['nome_planta'];
+>>>>>>> Stashed changes
                     $desc = $_POST['desc_planta'];
                     //Variavel que guarda a desc para editar no bd 
                     $data_plantado = $_POST['data_plantio'];
+<<<<<<< Updated upstream
                     //Variavel que guarda a data de plantio para editar no bd 
                     $sql = "UPDATE `planta`set `nome_planta` = '$nome', `desc_planta` = '$desc', `data_plantio` = '$data_plantado' 
                     WHERE id_planta = $id";
                     //Variavel que guarda o comando para edição do BD
+=======
+
+                    $sql = "UPDATE `planta`set `nome_planta` = '$nome', `desc_planta` = '$desc', `data_plantio` = '$data_plantado' WHERE id_planta = $id";
+
+>>>>>>> Stashed changes
                     if (mysqli_query($conexao,$sql)) {
                         //Se sucesso
                         echo "Planta Alterada com sucesso!";

@@ -53,7 +53,7 @@
                             <input type="submit" class="btn btn-success" value="Salvar Alterações">
                             <input type="hidden" name="id" value="<?php echo $linha['id_usuario']; ?>">
                         </div>
-                        <a href="index.php" class=" btn btn-info">Voltar ao Início</a>
+                        <a href="../menu.html" class=" btn btn-info">Voltar ao Início</a>
                     </form>
                 </div>
             </div>

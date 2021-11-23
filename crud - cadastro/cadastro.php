@@ -19,17 +19,19 @@
                 <?php
                     include "conexao.php";      
 					$email = $_POST['email'];
-                    $senha = $linha['senha'];
+                    $senha = $_POST['senha'];
+                    $nome = $_POST['nome'];
+                    $telefone = $_POST['telefone'];
+                    $endereço = $_POST['endereco'];
 
-                    $sql = "INSERT INTO `usuario`(`email`,`senha`) 
-                    VALUES ('$email','$senha')";
+                    $sql = "INSERT INTO `usuario`(`nome`,`email`,`telefone`,`endereco`,`senha`) VALUES ('$nome','$email', '$telefone', '$endereço', '$senha')";
 
                     if (mysqli_query($conexao,$sql)) {
-                        echo "$email Usuário possuí cadastrado!";
+                        echo "$email Usuário cadastrado!";
                     } else
                         echo "$email Usuário não cadastrado!";
                 ?>
-                 <a href="index.php" class="btn btn-primary">Voltar ao login</a>
+                 <a href="../index.html" class="btn btn-primary">Voltar ao login</a>
             </div>
         </div>
 

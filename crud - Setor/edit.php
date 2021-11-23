@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
     <head>
         <!-- Required meta tags -->
@@ -17,17 +17,25 @@
         <div class="container">
             <div class="row">
                 <?php
-                    include "conexao.php";
-                    $id = $_POST['id'];      
+                include "conexao.php";
+                    $id = $_POST['id'];
                     $nome = $_POST['nome_setor'];
+<<<<<<< Updated upstream
                     $id_planta = $_POST['id_planta'];
 
                     $sql = "UPDATE `setor`set `nome_setor` = '$nome', 'id_planta = '$id_planta' WHERE id_setor = $id";
+=======
+                    $planta = $_POST['selplanta'];
+                    //echo "Inf. recebidas: ".$nome.",Planta:".$planta.", id".$id;
+
+                    $sql = "UPDATE `setor`set `nome_setor` = '$nome', `id_planta` = '$planta' WHERE `id_setor` = '$id'";
+>>>>>>> Stashed changes
 
                     if (mysqli_query($conexao,$sql)) {
-                        echo "$nome Setor Alterado com sucesso!";
-                    } else
-                        echo "$nome Setor não Alterado!";
+                        echo "Setor Alterado com sucesso!";
+                    } else {
+                        echo "Setor não Alterado!";
+                }
                 ?>
                  <a href="pesquisa.php" class="btn btn-primary">Voltar ao Inicio</a>
             </div>

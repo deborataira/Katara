@@ -41,7 +41,7 @@
                         <div class="form-group">
                             <input type="submit" class="btn btn-success">
                         </div>
-                        <a href="index.html" class=" btn btn-info">Voltar ao login</a>
+                        <a href="../index.html" class=" btn btn-info">Voltar ao login</a>
                     </form>
                 </div>
             </div>

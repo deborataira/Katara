@@ -1,5 +1,9 @@
 <!doctype html>
+<<<<<<< Updated upstream
 <html lang="en">
+=======
+<html lang="pt-br">
+>>>>>>> Stashed changes
 
 <head>
     <!-- Required meta tags -->
@@ -51,7 +55,11 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">Nome Planta:</label>
+<<<<<<< Updated upstream
                         <?php criaLista('planta', 'nome_planta', 'nome_planta'); ?>
+=======
+                        <?php criaLista('planta', 'nome_planta', 'id_planta'); ?>
+>>>>>>> Stashed changes
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-success">

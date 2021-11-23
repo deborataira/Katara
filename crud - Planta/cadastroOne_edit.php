@@ -38,7 +38,10 @@
                         <!--Espaço para input pré preenchido da pergunta para alteração da info-->
                     </div>
                     <div class="form-group">
+<<<<<<< Updated upstream
                         <!--Inicio de espaço para pergunta e input-->
+=======
+>>>>>>> Stashed changes
                         <label for="desc_planta" class="form-label">Descrição:</label>
                         <!--Espaço para texto da pergunta-->
                         <input type="text" class="form-control" name="desc_planta" value="<?php echo $linha['desc_planta']; ?>">

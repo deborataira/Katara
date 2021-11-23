@@ -53,12 +53,21 @@
                             $dados = mysqli_query($conexao, $pesq);
                         }
                         while ($linha = mysqli_fetch_assoc($dados)) {
+<<<<<<< Updated upstream
                             //Enquanto ouverem dados
                             $id_planta = $linha['id_planta']; // variavel recebe dado
                             $nome = $linha['nome_planta']; // variavel recebe dado
                             $desc_planta = $linha['desc_planta']; // variavel recebe dado
                             $data_plantado = $linha['data_plantio']; // variavel recebe dado
                             echo "<tr> 
+=======
+                            $id_planta = $linha['id_planta'];
+                            $nome = $linha['nome_planta'];
+                            $desc_planta = $linha['desc_planta'];
+                            $data_plantado = $linha['data_plantio'];
+
+                            echo "<tr>
+>>>>>>> Stashed changes
                                         <th scope ='row'>$id_planta</th>
                                         <td>$nome</td>                                        
                                         <td>$desc_planta</td>

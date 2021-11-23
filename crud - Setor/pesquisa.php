@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <!-- Required meta tags -->
@@ -34,7 +34,6 @@
                         <tr>
                             <th scope="col">Nº</th>
                             <th scope="col">NOME</th>
-                            <th scope="col">PLANTA</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -53,16 +52,15 @@
                             $dados = mysqli_query($conexao, $pesq);
                         }
                         $dados = mysqli_query($conexao, $sql);
-
                         while ($linha = mysqli_fetch_assoc($dados)) {
                             $id_setor = $linha['id_setor'];
                             $nome = $linha['nome_setor'];
-                            $id_planta = $linha['id_planta'];
-
+                            $id = $linha['id_planta'];
+                            
                             echo "<tr>
                                         <th scope ='row'>$id_setor</th>
                                         <td>$nome</td>
-                                        <td>$id_planta</td>
+                                        <td></td>
                                         <td><a href ='cadastroOne_edit.php?id=$id_setor' class='btn btn-success btn-sm'>Editar</a>
                                             <a href ='#' class='btn btn-danger btn-sm' data-bs-toggle='modal' data-bs-target='#confirma'
                                             onclick=" . '"' . "pegar_dados($id_setor, '$nome')" . '"' . ">Excluir</a>

@@ -25,12 +25,12 @@
                     $sql = "DELETE from `usuario` WHERE id_usuario = $id";
 
                     if (mysqli_query($conexao,$sql)) {
-                        echo "$nome excluido com sucesso!",'success';
+                        echo "$nome excluido com sucesso!";
                     } else
-                        echo "$nome  não Excluido!",'danger';
+                        echo "$nome  não Excluido!";
                 ?>
                 
-                 <a href="pesquisa.php" class="btn btn-primary">Voltar para cadastro</a>
+                 <a href="../menu.html" class="btn btn-primary">Voltar para cadastro</a>
             </div>
         </div>
 

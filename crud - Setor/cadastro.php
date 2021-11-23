@@ -20,8 +20,13 @@
                     include "conexao.php";      
                     $nome_setor = $_POST['nome_setor'];
                     $planta = $_POST['selplanta'];
+<<<<<<< Updated upstream
                     //echo "Inf. recebidas: ".$nome_setor.",Planta id:".$planta." ";
                     $sql = "INSERT INTO `setor` (`id_setor`, `nome_setor`, `id_planta`) VALUES (NULL, '$nome_setor', '$planta')";
+=======
+                    echo "Inf. recebidas: ".$nome_setor.",Planta:".$planta." ";
+                    $sql = "INSERT INTO `setor` (`id_setor`, `nome_setor`, id_planta) VALUES (NULL, '$nome_setor', '$planta')";
+>>>>>>> Stashed changes
 
                     if (mysqli_query($conexao,$sql)) {
                         echo "$nome_setor cadastrado com sucesso!";

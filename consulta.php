@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -9,34 +10,32 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
-        <title>Home</title>
+        <title>Cadastro</title>
     </head>
 
     <body>
         <div class="container">
             <div class="row">
-                <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Sobre</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="pesquisa.php">Cadastro</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-                </div>
+                <?php
+                    include "conexao.php";      
+					$email = $_POST['email'];
+                    $senha = $_POST['senha'];
+
+                    $sql = "SELECT email, senha from usuario where email = $email and senha = $senha";
+
+                    if (mysqli_query($conexao,$sql)) {
+                        echo "$email Encontrado";
+                    } else
+                        echo "$email Não Encontrado";
+                ?>
+                 <a href="menu.html" class="btn btn-primary">Voltar ao login</a>
             </div>
         </div>
 
 
+        <!-- Optional JavaScript; choose one of the two! -->
 
+        <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
             crossorigin="anonymous"></script>
