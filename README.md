@@ -1,4 +1,4 @@
-# WATARA
+# KATARA
 
 
 ##Entrar no phpmyadmin pelo Easy php
